@@ -2,6 +2,12 @@
 
 A plug-and-play Debian Live ISO with Ollama preinstalled — bootable from USB, air-gapped by design, and ready to run large language models offline.
 
+[![Build](https://github.com/vedmakk/ollama-backpack/actions/workflows/lint.yml/badge.svg)](https://github.com/vedmakk/ollama-backpack/actions)
+[![Latest Release](https://img.shields.io/github/v/release/vedmakk/ollama-backpack?label=release)](https://github.com/vedmakk/ollama-backpack/releases)
+[![License](https://img.shields.io/github/license/vedmakk/ollama-backpack)](LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/vedmakk/ollama-backpack/total)](https://github.com/vedmakk/ollama-backpack/releases)
+![ISO Bootable](https://img.shields.io/badge/ISO-Bootable-blue)
+
 ## 🎯 What Is This?
 
 **Ollama Backpack** is a self-contained, bootable Debian Live ISO preloaded with Ollama and open-source language models.
