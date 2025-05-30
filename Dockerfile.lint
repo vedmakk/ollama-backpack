@@ -1,0 +1,26 @@
+FROM alpine:latest
+
+RUN apk add --no-cache \
+  bash \
+  git \
+  python3 \
+  py3-pip \
+  ruby \
+  shellcheck \
+  shfmt \
+  ruby-dev \
+  build-base
+
+# Set up a virtual environment for Python tools
+RUN python3 -m venv /venv && \
+. /venv/bin/activate && \
+pip install --upgrade pip && \
+pip install pre-commit && \
+echo 'source /venv/bin/activate' >> /etc/profile
+
+# Ensure the environment is activated for interactive shells and scripts
+ENV PATH="/venv/bin:$PATH"
+
+RUN gem install mdl
+
+WORKDIR /project

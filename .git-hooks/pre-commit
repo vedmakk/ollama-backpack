@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Running pre-commit in Docker..."
+docker run --rm -v "$PWD:/project" -v "$HOME/.cache/pre-commit:/root/.cache/pre-commit" -w /project precommit-runner pre-commit run --hook-stage commit --all-files

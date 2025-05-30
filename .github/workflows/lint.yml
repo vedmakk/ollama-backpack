@@ -1,0 +1,30 @@
+name: Lint Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🛠️ Build Linter Image
+        run: docker build -t precommit-runner -f Dockerfile.lint .
+
+      - name: 📋 Run Lint Checks Inside Linter Image
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}:/project" \
+            -w /project \
+            -e GIT_DIR=/project/.git \
+            -e GIT_WORK_TREE=/project \
+            precommit-runner \
+            pre-commit run --all-files

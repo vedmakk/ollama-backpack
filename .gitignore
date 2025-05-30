@@ -1,0 +1,18 @@
+.env
+keys
+build
+live-build
+*.iso
+dist/
+ia.ini
+
+# Editor backups and OS junk
+*~
+*.swp
+*.swo
+*.bak
+*.orig
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
