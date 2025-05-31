@@ -1,4 +1,5 @@
-UPLOAD_IDENTIFIER = ollama-backpack
+PRODUCT_NAME := $(shell cat product_name.txt | xargs)
+UPLOAD_IDENTIFIER := $(PRODUCT_NAME)
 LINT_IMAGE = precommit-runner
 PRECOMMIT_CACHE = $$HOME/.cache/pre-commit
 
@@ -48,10 +49,10 @@ checksums:
 
 # Upload the ISOs to archive.org.
 upload:
-	@docker build -f Dockerfile.upload -t ollama-backpack-upload .
+	@docker build -f Dockerfile.upload -t $(PRODUCT_NAME)-upload .
 	@if [ ! -f ia.ini ]; then \
 		echo "ia.ini not found, running interactive configure..."; \
-		docker run -it --rm -v "$$(pwd)":/app ollama-backpack-upload ia --config-file /app/ia.ini configure; \
+		docker run -it --rm -v "$$(pwd)":/app $(PRODUCT_NAME)-upload ia --config-file /app/ia.ini configure; \
 	fi
 	@if [ ! -d dist ] || [ -z "$$(ls dist/*.iso 2>/dev/null)" ]; then \
 		echo "Error: dist directory is empty or contains no .iso files."; \
@@ -62,7 +63,7 @@ upload:
 		-v "$$(pwd)/dist":/app/dist \
 		-v "$$(pwd)/ia.ini":/app/ia.ini \
 		-e IA_CONFIG_FILE=/app/ia.ini \
-		ollama-backpack-upload \
+		$(PRODUCT_NAME)-upload \
 		--identifier "$(UPLOAD_IDENTIFIER)"
 
 %:

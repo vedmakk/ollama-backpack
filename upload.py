@@ -6,6 +6,17 @@ from pathlib import Path
 import argparse
 from internetarchive import upload
 
+# Load product name from central source
+product_name_file = Path("product_name.txt")
+if not product_name_file.exists():
+    print("Error: 'product_name.txt' not found", file=sys.stderr)
+    sys.exit(1)
+try:
+    PRODUCT_NAME = product_name_file.read_text().strip()
+except Exception as e:
+    print(f"Error: failed to read 'product_name.txt': {e}", file=sys.stderr)
+    sys.exit(1)
+
 def main():
     parser = argparse.ArgumentParser(description="Upload dist files to archive.org")
     parser.add_argument("--identifier", required=True, help="Archive.org identifier for the upload")
@@ -39,7 +50,7 @@ def main():
         os.environ["IA_CONFIG_FILE"] = str(config_path.resolve())
 
     metadata = {
-        "title": "ollama-backpack",
+        "title": PRODUCT_NAME,
         "description": "A plug-and-play Debian Live ISO with Ollama preinstalled — bootable from USB, air-gapped by design, and ready to run large language models offline.",
         "creator": "vedmakk",
         "mediatype": "software",

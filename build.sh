@@ -64,6 +64,7 @@ fi
 WORKDIR=$(pwd)
 VERSION=$(tr -d '[:space:]' < "$WORKDIR/VERSION")
 BUILD_DIR="$WORKDIR/live-build"
+PRODUCT_NAME=$(tr -d '[:space:]' < "$WORKDIR/product_name.txt")
 
 if $CLEAR_CACHE; then
   echo "[*] Clearing previous build artifacts..."
@@ -276,7 +277,7 @@ fi
 # Move ISO to dist directory
 OUTPUT_ISO_DIR="$WORKDIR/dist"
 mkdir -p "$OUTPUT_ISO_DIR"
-OUTPUT_ISO="$OUTPUT_ISO_DIR/ollama-backpack-${VERSION}-${ARCH}.iso"
+OUTPUT_ISO="$OUTPUT_ISO_DIR/${PRODUCT_NAME}-${VERSION}-${ARCH}.iso"
 echo "[*] Moving ISO to $OUTPUT_ISO"
 cp -f "$ISO_FILE" "$OUTPUT_ISO"
 
