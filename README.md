@@ -1,18 +1,18 @@
-![Ollama Backpack Logo](assets/logo.png)
+![Ollama Rucksack Logo](assets/logo.png)
 
-# 🎒 Ollama Backpack
+# 🎒 Ollama Rucksack
 
 A plug-and-play Debian Live ISO with Ollama preinstalled — bootable from USB, air-gapped by design, and ready to run large language models offline.
 
-[![Latest Release](https://img.shields.io/github/v/release/vedmakk/ollama-backpack?label=release)](https://github.com/vedmakk/ollama-backpack/releases)
-[![Downloads](https://img.shields.io/github/downloads/vedmakk/ollama-backpack/total)](https://github.com/vedmakk/ollama-backpack/releases)
+[![Latest Release](https://img.shields.io/github/v/release/vedmakk/ollama-rucksack?label=release)](https://github.com/vedmakk/ollama-rucksack/releases)
+[![Downloads](https://img.shields.io/github/downloads/vedmakk/ollama-rucksack/total)](https://github.com/vedmakk/ollama-rucksack/releases)
 ![ISO Bootable](https://img.shields.io/badge/ISO-Bootable-blue)
-[![Build](https://github.com/vedmakk/ollama-backpack/actions/workflows/lint.yml/badge.svg)](https://github.com/vedmakk/ollama-backpack/actions)
-[![License](https://img.shields.io/github/license/vedmakk/ollama-backpack)](LICENSE)
+[![Build](https://github.com/vedmakk/ollama-rucksack/actions/workflows/lint.yml/badge.svg)](https://github.com/vedmakk/ollama-rucksack/actions)
+[![License](https://img.shields.io/github/license/vedmakk/ollama-rucksack)](LICENSE)
 
 ## 🎯 What Is This?
 
-**Ollama Backpack** is a self-contained, bootable Debian Live ISO preloaded with Ollama and open-source language models.
+**Ollama Rucksack** is a self-contained, bootable Debian Live ISO preloaded with Ollama and open-source language models.
 
 - No internet required.
 - No installation needed.
@@ -38,7 +38,7 @@ This isn't a secure communication platform or privacy tool — just a portable L
 
 ## 🚀 Quick Start
 
-Head over to the [Releases](https://github.com/vedmakk/ollama-backpack/releases) page. There you'll find:
+Head over to the [Releases](https://github.com/vedmakk/ollama-rucksack/releases) page. There you'll find:
 
 - The latest ISO files hosted on `archive.org`.
 - A `sha256sums.txt` file to verify the download.
@@ -109,7 +109,7 @@ _Note: The `--` is required before any options._
 ### Output
 
 The generated ISO image containing all tools and configurations:
-`./dist/ollama-backpack-<version>-<arch>.iso`
+`./dist/ollama-rucksack-<version>-<arch>.iso`
 
 ### 🧩 Ollama Models
 
