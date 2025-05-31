@@ -12,6 +12,7 @@ ENV PATH="/venv/bin:$PATH"
 WORKDIR /app
 
 COPY upload.py /app/upload.py
+COPY product_name.txt /app/product_name.txt
 COPY upload-entry.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
