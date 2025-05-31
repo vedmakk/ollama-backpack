@@ -60,7 +60,7 @@ def main():
 
     print(f"Uploading files from '{args.dist_dir}' to archive.org with identifier '{args.identifier}'...")
     try:
-        response = upload(args.identifier, str(dist_path) + "/", metadata=metadata)
+        response = upload(args.identifier, str(dist_path) + "/", metadata=metadata, verbose=True, retries=10, retries_sleep=30)
         print("Upload response:", response)
 
         if response[0].status_code != 200:
