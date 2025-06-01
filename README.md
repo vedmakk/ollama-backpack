@@ -5,7 +5,6 @@
 A plug-and-play Debian Live ISO with Ollama preinstalled — bootable from USB, air-gapped by design, and ready to run large language models offline.
 
 [![Latest Release](https://img.shields.io/github/v/release/vedmakk/ollama-rucksack?label=release)](https://github.com/vedmakk/ollama-rucksack/releases)
-[![Downloads](https://img.shields.io/github/downloads/vedmakk/ollama-rucksack/total)](https://github.com/vedmakk/ollama-rucksack/releases)
 ![ISO Bootable](https://img.shields.io/badge/ISO-Bootable-blue)
 [![Build](https://github.com/vedmakk/ollama-rucksack/actions/workflows/lint.yml/badge.svg)](https://github.com/vedmakk/ollama-rucksack/actions)
 [![License](https://img.shields.io/github/license/vedmakk/ollama-rucksack)](LICENSE)
