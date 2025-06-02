@@ -20,11 +20,24 @@ A plug-and-play Debian Live ISO with Ollama preinstalled — bootable from USB, 
 It's ideal for:
 
 - Exploring LLMs without touching your main OS
-- Offline AI development environments
 - Educational or lab use
 - Developers who want a clean, minimal LLM sandbox
+- Bringing AI to places where internet is limited or unavailable
 
 Whether you're on a train, in the mountains, or just dodging flaky Wi-Fi, your models go where you go.
+
+## 🌍 Why It Matters
+
+Access to AI shouldn't depend on access to the cloud.
+
+With Ollama Rucksack, anyone with a basic computer can boot into a ready-to-use LLM environment — no installation, no internet, no setup. This makes it possible to bring powerful language models to places where connectivity is poor and infrastructure is limited.
+
+- In rural schools without stable internet
+- In disaster zones or field research setups
+- For learners and developers with older machines
+- For anyone who wants to explore AI offline and on their terms
+
+By packaging open models into a portable, air-gapped ISO, Ollama Rucksack helps democratize access to human knowledge — using just a USB stick.
 
 ## 📦 What's Inside?
 
